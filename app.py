@@ -72,7 +72,7 @@ def get_parameters(st, unique_labels):
     umap__n_neighbors = st.sidebar.slider(
         label='This parameter controls how UMAP balances local versus global structure in the data:',
         min_value=2,
-        max_value=unique_labels + 1,
+        max_value=unique_labels * 10,
         value=5,
         step=1)
 
