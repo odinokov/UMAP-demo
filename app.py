@@ -33,20 +33,7 @@ def load_data(sample_size=300, seed=0):
 
     mnist = fetch_openml('mnist_784', version=1)
 
-    # label	to Description dictionary
-    label_decoder = {str(k): v for k, v in enumerate((
-        'T-shirt/top',
-        'Trouser',
-        'Pullover',
-        'Dress',
-        'Coat',
-        'Sandal',
-        'Shirt',
-        'Sneaker',
-        'Bag',
-        'Ankle boot'))}
-
-    labels = mnist.target.map(label_decoder)
+    labels = mnist.target
 
     # return sample
     np.random.seed(seed)
